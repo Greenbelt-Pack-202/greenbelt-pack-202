@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenbelt Cub Scout Pack 202 | Greenbelt, Maryland</title>
+<meta name="description" content="Greenbelt Cub Scout Pack 202 — adventure, friendship, and fun for kids in kindergarten through fifth grade in Greenbelt, Maryland. The oldest pack in Prince George's County.">
+<style>
+  :root {
+    --navy: #1b365d;
+    --navy-dark: #12243f;
+    --gold: #f0a500;
+    --gold-dark: #d18e00;
+    --cream: #fbf7ef;
+    --ink: #21303f;
+    --muted: #5a6b7b;
+    --line: #e4dccb;
+    --white: #ffffff;
+    --radius: 14px;
+    --shadow: 0 8px 30px rgba(27, 54, 93, 0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { line-height: 1.2; color: var(--navy); }
+  a { color: var(--navy); }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 22px; }
+
+  /* Header / nav */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--navy);
+    box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 22px; max-width: 1060px; margin: 0 auto; flex-wrap: wrap; gap: 8px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; color: #fff; font-weight: 700; letter-spacing: .3px; }
+  .badge {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--gold); color: var(--navy-dark);
+    display: grid; place-items: center; font-weight: 800; font-size: 15px;
+    box-shadow: inset 0 0 0 3px rgba(255,255,255,.25);
+  }
+  .brand small { display: block; font-weight: 500; color: #c7d4e6; font-size: 12px; letter-spacing: .4px; }
+  nav ul { list-style: none; display: flex; gap: 4px; flex-wrap: wrap; }
+  nav a {
+    color: #e8eef7; text-decoration: none; font-size: 14.5px; font-weight: 600;
+    padding: 8px 12px; border-radius: 8px; transition: background .15s, color .15s;
+  }
+  nav a:hover { background: rgba(255,255,255,.12); color: #fff; }
+
+  /* Hero */
+  .hero {
+    background:
+      linear-gradient(rgba(18,36,63,.82), rgba(18,36,63,.88)),
+      radial-gradient(circle at 20% 20%, #2a4d80, #12243f 70%);
+    color: #fff; text-align: center; padding: 84px 22px 92px;
+  }
+  .hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 10px; }
+  .hero .tag { color: var(--gold); font-size: clamp(1.05rem, 2.5vw, 1.4rem); font-weight: 600; margin-bottom: 22px; }
+  .hero p { max-width: 640px; margin: 0 auto 30px; color: #dde6f1; font-size: 1.08rem; }
+
+  .btn {
+    display: inline-block; background: var(--gold); color: var(--navy-dark);
+    font-weight: 800; text-decoration: none; padding: 14px 28px; border-radius: 999px;
+    box-shadow: var(--shadow); transition: transform .12s, background .15s; font-size: 1rem;
+  }
+  .btn:hover { background: var(--gold-dark); transform: translateY(-2px); }
+  .btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 2px rgba(255,255,255,.5); }
+  .btn.ghost:hover { background: rgba(255,255,255,.12); }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  section:nth-of-type(even) { background: var(--white); }
+  section h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 8px; }
+  .eyebrow { color: var(--gold-dark); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: .8rem; margin-bottom: 6px; }
+  section p { max-width: 760px; margin-bottom: 14px; color: var(--ink); }
+  .lead { font-size: 1.12rem; }
+
+  /* Den grid */
+  .dens { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: 26px; }
+  .den {
+    background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 22px 18px; text-align: center; transition: transform .12s, box-shadow .15s;
+  }
+  .den:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+  .den .name { font-weight: 800; color: var(--navy); font-size: 1.15rem; }
+  .den .grade { color: var(--muted); font-size: .95rem; margin-top: 4px; }
+
+  /* Info cards */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 26px; }
+  .card {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 24px; box-shadow: var(--shadow);
+  }
+  section:nth-of-type(even) .card { background: var(--cream); }
+  .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .card p { font-size: .98rem; color: var(--muted); margin-bottom: 0; }
+
+  ul.list { margin: 10px 0 14px 22px; }
+  ul.list li { margin-bottom: 6px; }
+
+  .note { background: #fff7e6; border-left: 4px solid var(--gold); padding: 10px 16px; border-radius: 8px; font-size: .95rem; color: #6b5520; margin-top: 8px; }
+
+  .center { text-align: center; }
+  .mt { margin-top: 26px; }
+
+  .links a { display: inline-block; margin-right: 18px; font-weight: 600; }
+
+  /* Footer */
+  footer { background: var(--navy-dark); color: #c7d4e6; text-align: center; padding: 36px 22px; font-size: .92rem; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .nav { justify-content: center; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <span class="badge">202</span>
+      <span>Greenbelt Pack 202<small>Cub Scouts &middot; Greenbelt, MD</small></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#dens">Dens</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#join">Join</a></li>
+        <li><a href="#uniforms">Uniforms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Greenbelt Cub Scout Pack 202</h1>
+  <div class="tag">Adventure, friendship, and fun in Greenbelt, Maryland</div>
+  <p>For more than 75 years, Pack 202 has helped local kids explore the outdoors, build confidence, and make lifelong friends. Whether your child is in kindergarten or fifth grade, there's a place for them here &mdash; and a welcome for your whole family.</p>
+  <a class="btn" href="mailto:greenbeltpack202@gmail.com?subject=Joining%20Pack%20202">Email Us to Join</a>
+  &nbsp;
+  <a class="btn ghost" href="#join">Learn More</a>
+</div>
+
+<!-- WHAT IS CUB SCOUTING -->
+<section id="scouting">
+  <div class="wrap">
+    <div class="eyebrow">Welcome</div>
+    <h2>What Is Cub Scouting?</h2>
+    <p class="lead">Cub Scouting is a year-round program for kids in kindergarten through fifth grade, part of Scouting America (formerly the Boy Scouts of America). It's all about learning by doing: hiking, camping, building things, helping the community, and earning badges along the way.</p>
+    <p>Kids work through fun, age-appropriate adventures with their den &mdash; a small group of scouts in the same grade &mdash; and come together with the whole pack for bigger events. Along the way they pick up real skills like teamwork, responsibility, and problem-solving, while having a great time doing it.</p>
+    <p>Best of all, Cub Scouting is a family activity. Parents and caregivers are part of the fun, helping their scout grow and getting to know other families in the community.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">Our Story</div>
+    <h2>About Pack 202</h2>
+    <p class="lead">Pack 202 is one of the longest-running Cub Scout packs in the area. We've been chartered for over 75 years in the National Capital Area Council, and we're proud to be the <strong>oldest pack in Prince George's County</strong>.</p>
+    <p>That history means a lot to us. Generations of Greenbelt kids have come through Pack 202, and we carry that tradition forward with every campfire, pinewood derby, and service project. We're a welcoming, family-driven community, and we'd love for your family to be part of the next chapter.</p>
+  </div>
+</section>
+
+<!-- DENS -->
+<section id="dens">
+  <div class="wrap">
+    <div class="eyebrow">By Grade</div>
+    <h2>Our Dens</h2>
+    <p>Scouts are grouped into dens by grade, so your child is always with kids their own age. All the dens come together as one pack for our monthly pack meetings.</p>
+    <div class="dens">
+      <div class="den"><div class="name">Lions</div><div class="grade">Kindergarten</div></div>
+      <div class="den"><div class="name">Tigers</div><div class="grade">First Grade</div></div>
+      <div class="den"><div class="name">Wolves</div><div class="grade">Second Grade</div></div>
+      <div class="den"><div class="name">Bears</div><div class="grade">Third Grade</div></div>
+      <div class="den"><div class="name">Webelos</div><div class="grade">Fourth Grade</div></div>
+      <div class="den"><div class="name">Arrow of Light</div><div class="grade">Fifth Grade</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">What to Expect</div>
+    <h2>How the Pack Works</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Meetings</h3>
+        <p>Dens meet about 2&ndash;4 times per month. Once a month, on a Thursday, the whole pack gets together &mdash; scouts show off what they worked on, sing songs, tell jokes, and put on skits. It's the heart of what we do. <em>[Add your usual meeting time &amp; location here.]</em></p>
+      </div>
+      <div class="card">
+        <h3>Paperwork &amp; Dues</h3>
+        <p>To keep your scout active and ready for the next den or pack meeting, all forms, paperwork, and dues need to be turned in by the following meeting.</p>
+      </div>
+      <div class="card">
+        <h3>Parents Pitch In</h3>
+        <p>Pack 202 runs on family involvement. Every parent or caregiver is expected to help out in some way &mdash; and it's a great way to be part of your child's experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join">
+  <div class="wrap">
+    <div class="eyebrow">Get Started</div>
+    <h2>How to Join</h2>
+    <p class="lead">We'd love to have your family! Any child in kindergarten through fifth grade is welcome &mdash; no experience required.</p>
+    <ul class="list">
+      <li><strong>Dues:</strong> Annual dues are <strong>$225</strong>, which helps cover registration, awards, activities, and pack supplies for the year.</li>
+      <li><strong>The first step:</strong> Email us and ask to be added to our Google Group and email list. That's how we share meeting details, event reminders, and everything you'll need to get started &mdash; so you won't get left out.</li>
+    </ul>
+    <div class="note">Please confirm the current dues amount before publishing.</div>
+    <p class="mt"><a class="btn" href="mailto:greenbeltpack202@gmail.com?subject=Joining%20Pack%20202&amp;body=Hi%20Pack%20202%2C%20we'd%20like%20to%20join%20your%20email%20list%20and%20learn%20more%20about%20joining.">Email Us to Join</a></p>
+  </div>
+</section>
+
+<!-- UNIFORMS -->
+<section id="uniforms">
+  <div class="wrap">
+    <div class="eyebrow">Gear Up</div>
+    <h2>Uniforms &amp; Gear</h2>
+    <p>Scouts wear a uniform to den and pack meetings. A Cub Scout uniform includes:</p>
+    <ul class="list">
+      <li>Short-sleeve uniform shirt</li>
+      <li>Switchback pants</li>
+      <li>Hat</li>
+      <li>Neckerchief and slide</li>
+      <li>Belt</li>
+      <li>Den handbook</li>
+    </ul>
+    <p><strong>Patches:</strong> the National Capital Area Council patch on the shoulder, the Pack 202 numerals, and the World Crest emblem.</p>
+    <p><strong>Where to buy:</strong> the National Capital Scout Shop at the Marriott Scout Service Center, 9190 Rockville Pike, Bethesda, MD 20814 &mdash; phone 301-564-1091. You can also order online at <a href="https://www.scoutshop.org" target="_blank" rel="noopener">scoutshop.org</a>.</p>
+    <div class="note">NCAC has discussed relocating this shop &mdash; worth a quick call before you make the trip.</div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources">
+  <div class="wrap">
+    <div class="eyebrow">Helpful Links</div>
+    <h2>Resources</h2>
+    <p class="links">
+      <a href="https://greenbeltpack202.net" target="_blank" rel="noopener">Pack Website</a>
+      <a href="https://ncacscouting.org" target="_blank" rel="noopener">National Capital Area Council</a>
+      <a href="https://www.scouting.org" target="_blank" rel="noopener">Scouting America</a>
+      <a href="https://www.scoutshop.org" target="_blank" rel="noopener">Uniforms &amp; Gear</a>
+      <a href="https://www.facebook.com/GreenbeltCubScoutPack202" target="_blank" rel="noopener">Facebook</a>
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap center">
+    <div class="eyebrow">Say Hello</div>
+    <h2>Contact Us</h2>
+    <p style="margin-left:auto;margin-right:auto;">Have questions, or ready to join? We're a friendly bunch, and there's no such thing as a silly question. Reach out and we'll help you figure out the next step.</p>
+    <p class="mt"><a class="btn" href="mailto:greenbeltpack202@gmail.com?subject=Question%20for%20Pack%20202">Email greenbeltpack202@gmail.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>Greenbelt Cub Scout Pack 202 &middot; National Capital Area Council &middot; Greenbelt, Maryland</p>
+  <p style="margin-top:6px;"><a href="mailto:greenbeltpack202@gmail.com">greenbeltpack202@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
