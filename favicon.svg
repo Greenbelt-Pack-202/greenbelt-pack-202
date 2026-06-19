@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Greenbelt Pack 202">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#1b365d"/>
+  <rect x="6.5" y="6.5" width="51" height="51" rx="10.5" fill="none" stroke="#f0a500" stroke-width="2.5"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="30" letter-spacing="-1.5" fill="#f0a500">202</text>
+</svg>
